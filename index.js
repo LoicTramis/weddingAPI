@@ -3,7 +3,7 @@ import { readFileSync, writeFileSync } from "fs";
 import dotenv from "dotenv";
 dotenv.config();
 const app = express();
-const port = 5001;
+const PORT = 5001;
 
 app.use(express.json());
 
@@ -25,6 +25,6 @@ app.post("/", (req, res) => {
     }
 });
 
-app.listen(5001, () => {
+app.listen(PORT || 5000, () => {
     console.log(`Example app listening on port 5001`);
 });
