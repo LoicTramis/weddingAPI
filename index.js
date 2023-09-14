@@ -6,6 +6,7 @@ const app = express();
 const port = 3000;
 
 app.use(express.json());
+
 app.get("/", (req, res) => {
     const data = readFileSync("./data/guests.json");
     const guests = JSON.parse(data);
@@ -14,8 +15,6 @@ app.get("/", (req, res) => {
 
 app.post("/", (req, res) => {
     const key = req.headers.key;
-    console.log(req.headers.key);
-    console.log(process.env.KEY);
     const data = req.body;
     const guests = JSON.stringify(data);
     if (key === process.env.KEY) {
