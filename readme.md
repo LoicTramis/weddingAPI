@@ -11,3 +11,7 @@ Set guests from a JSON format
 
 Heroku
 [Deploying Node.js App](https://devcenter.heroku.com/articles/deploying-nodejs)
+git add .
+git commit -m "Added a Procfile."
+heroku login
+git push heroku master
